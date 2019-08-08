@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  selectedLink: string;
+  title = 'Tour of Heroes';
+
+  constructor() {
+    this.selectedLink = '/dashboard';
+  }
+
+  onSelect(link: string): void {
+    this.selectedLink = link;
+  }
 }
